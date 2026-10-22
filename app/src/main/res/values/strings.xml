@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">VibroSensor</string>
+    <string name="connected_to_raspberry">Raspberry Pi (Центр)</string>
+    <string name="stop">СТОП</string>
+    <string name="hold_for_start">Удерживайте для СТАРТ</string>
+    <string name="last_command_default">Последняя команда: —</string>
+    <string name="default_athlete_name">ИВАНОВ</string>
+    <string name="previous_athlete">Предыдущий спортсмен</string>
+    <string name="next_athlete">Следующий спортсмен</string>
+    <string name="menu">Меню</string>
+
+    <!-- Добавленные строки -->
+    <string name="connection_status_description">Статус подключения</string>
+    <string name="signal_strength_description">Уровень сигнала</string>
+    <string name="athlete_color_description">Цвет спортсмена</string>
+</resources>

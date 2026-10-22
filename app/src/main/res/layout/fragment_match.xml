@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:background="?android:attr/windowBackground">
+
+    <!-- Статус бар: центральный модуль + носимое устройство -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="?android:attr/colorBackground"
+        android:layout_marginBottom="12dp"
+        android:elevation="2dp"
+        android:padding="12dp">
+
+        <!-- Центральный модуль (Raspberry Pi) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+
+            <ImageView
+                android:id="@+id/connectionLed"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ic_led_gray"
+                android:layout_marginEnd="12dp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Центральный модуль"
+                android:textSize="13sp"
+                android:textColor="?android:attr/textColorSecondary"/>
+
+            <TextView
+                android:id="@+id/connectionText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Нет подключения"
+                android:textSize="13sp"
+                android:textColor="?android:attr/textColorPrimary"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/btnConnect"
+                android:layout_width="90dp"
+                android:layout_height="36dp"
+                android:text="Подкл."
+                android:backgroundTint="#4CAF50"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:layout_marginStart="8dp"
+                app:cornerRadius="18dp"/>
+
+        </LinearLayout>
+
+        <!-- Носимое устройство (ESP32) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/deviceLed"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ic_led_gray"
+                android:layout_marginEnd="12dp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Носимое устройство"
+                android:textSize="13sp"
+                android:textColor="?android:attr/textColorSecondary"/>
+
+            <TextView
+                android:id="@+id/deviceText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Не подключено"
+                android:textSize="13sp"
+                android:textColor="?android:attr/textColorPrimary"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Имена спортсменов -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="16dp">
+
+        <LinearLayout
+            android:id="@+id/redPanel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="12dp"
+            android:background="@drawable/indicator_red"
+            android:layout_marginEnd="8dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:id="@+id/redEditArea">
+
+                <TextView
+                    android:id="@+id/redName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ИВАНОВ"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" ✎"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/redStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Активен"
+                android:textColor="#FFFFFF"
+                android:textSize="11sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bluePanel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="12dp"
+            android:background="@drawable/indicator_blue"
+            android:layout_marginStart="8dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:id="@+id/blueEditArea">
+
+                <TextView
+                    android:id="@+id/blueName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ПЕТРОВ"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" ✎"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/blueStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Активен"
+                android:textColor="#FFFFFF"
+                android:textSize="11sp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Кнопки управления -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="24dp">
+
+            <Button
+                android:id="@+id/shortVibeButton"
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                android:layout_weight="1"
+                android:text="Короткая\nвибрация"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:backgroundTint="#FF9800"
+                android:textColor="#FFFFFF"
+                android:layout_marginEnd="8dp"
+                app:cornerRadius="70dp"
+                android:enabled="false"/>
+
+            <Button
+                android:id="@+id/longVibeButton"
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                android:layout_weight="1"
+                android:text="Длинная\nвибрация"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:backgroundTint="#2196F3"
+                android:textColor="#FFFFFF"
+                android:layout_marginStart="8dp"
+                app:cornerRadius="70dp"
+                android:enabled="false"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/holdVibeButton"
+            android:layout_width="260dp"
+            android:layout_height="80dp"
+            android:text="Вибрация"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:backgroundTint="#4CAF50"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="24dp"
+            app:cornerRadius="40dp"
+            android:enabled="false"/>
+
+        <!-- Справка -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp"
+            android:background="?android:attr/colorBackground">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📖 Как использовать"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="?android:attr/textColorPrimary"
+                    android:layout_marginBottom="8dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="• Короткая вибрация — СТАРТ\n• Длинная вибрация — СТОП\n• Вибрация — зажмите и держите, пока нужна вибрация. Отпустите для прекращения"
+                    android:textSize="12sp"
+                    android:textColor="?android:attr/textColorSecondary"
+                    android:lineSpacingExtra="4dp"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    <!-- Последняя команда -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="12dp"
+        android:background="?android:attr/colorBackground"
+        android:layout_marginTop="8dp"
+        android:elevation="2dp">
+
+        <TextView
+            android:id="@+id/lastCommand"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Команда: —"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="?android:attr/textColorPrimary"/>
+
+        <ImageButton
+            android:id="@+id/menuButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_menu"
+            android:background="?selectableItemBackgroundBorderless"
+            android:padding="8dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

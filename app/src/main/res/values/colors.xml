@@ -1,0 +1,33 @@
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="green">#4CAF50</color>
+    <color name="red">#D32F2F</color>
+    <color name="orange">#FF9800</color>
+    <color name="blue">#2196F3</color>
+
+    <!-- Фоны -->
+    <color name="background_light">#F5F5F5</color>
+    <color name="background_dark">#121212</color>
+    <color name="card_light">#FFFFFF</color>
+    <color name="card_dark">#1E1E1E</color>
+
+    <!-- Текст -->
+    <color name="text_light">#333333</color>
+    <color name="text_dark">#FFFFFF</color>
+    <color name="text_hint_light">#888888</color>
+    <color name="text_hint_dark">#AAAAAA</color>
+
+    <!-- Поля ввода -->
+    <color name="input_background_light">#FFFFFF</color>
+    <color name="input_background_dark">#2C2C2C</color>
+    <color name="edittext_bg_light">#FFFFFF</color>
+    <color name="edittext_bg_dark">#2C2C2C</color>
+    <color name="edittext_border_light">#CCCCCC</color>
+    <color name="edittext_border_dark">#555555</color>
+</resources>
